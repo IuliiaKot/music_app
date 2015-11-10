@@ -1,0 +1,28 @@
+<% if @bands.count == 0 %>
+  <p class='text-center mssg'> You don't have any artists</p>
+<% else %>
+  <% @bands.each do |band|%>
+
+    <div class="col-md-4 col-sm-6">
+
+      <div class="thumbnail">
+
+        <div class="cover">
+          <h3 class=''><%= band.name%></h3>
+          <p> <%= pluralize(band.albums.count,'album')%></p>
+        </div>
+        <div class="fav-del">
+          <% if band.favotite %>
+            <%= link_to "",  favorite_band_path(band), class: ' fa fa-star-o favorite', method: :put %>
+          <% else %>
+            <%= link_to "",  favorite_band_path(band), class: ' fa fa-star-o', method: :put %>
+          <% end %>
+          <%= link_to "", { action: :destroy, id: band.id }, class: ' fa fa-trash', method: :delete  %>
+
+        </div>
+
+      </div>
+
+    </div>
+  <% end %>
+<% end %>

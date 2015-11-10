@@ -1,0 +1,41 @@
+
+<!-- <main class='home'>
+  <div class="row text-center">
+    <h1>Search</h1>
+  </div>
+  <div class="container text-center">
+    <aside class="s-left">
+        <input id="pac-input" placeholder="Search" type="text" ></input>
+    </aside>
+    <aside class='s-right'>
+      <%= link_to 'Search', search_index_path, class: 'btn btn-default btn-lg'%>
+      </aside>
+  </div>
+</main> -->
+
+
+
+<main class='home'>
+  <div class="row text-center">
+    <h1>Search</h1>
+  </div>
+  <div class="container text-center">
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+        <%= form_tag('\home', :method => "get", id: "search-form") do %>
+          <%= text_field_tag :search, params[:search], placeholder: "Search All", class: 'form-control' %>
+          <%= submit_tag "Search", :name => nil , class: 'btn bth dedault'%>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</main>
+
+
+  <% if params[:search] %>
+    <% if @bands %>
+      <%= render 'albums'%>
+    <% elsif @tracks_for_album %>
+      <%= render 'tracks_for_album'%>
+    <% end %>
+  <% end %>

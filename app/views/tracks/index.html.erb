@@ -1,0 +1,18 @@
+
+<main class='tracks'>
+  <h2 class='text-center'>Songs</h2>
+  <div class="row text-center">
+    <%= link_to 'All Songs', tracks_path, class: 'btn btn-default' %>
+    <%= link_to 'Add a track', '/tracks/new', class: 'btn btn-default' %>
+    <%= link_to 'See  all favorites Songs', tracks_path(favorite: true), class: 'btn btn-default' %>
+  </div>
+  <div class="container">
+
+      <% if params[:favorite]%>
+        <%= render 'favorite_tracks'%>
+      <% else %>
+        <%= render 'all_tracks'%>
+      <% end %>
+
+  </div>
+</main>

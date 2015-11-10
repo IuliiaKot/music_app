@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Recordly</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Playfair+Display:400,700,400italic,700italic,900italic,900' rel='stylesheet' type='text/css'>
+</head>
+<body class='my-body'>
+  <header class="navbar navbar-fixed-top navbar-inverse">
+    <div class="container">
+      <aside class="left"><i class="fa fa-music"></i>Recordly</aside>
+      <% if !current_user.nil? %>
+        <aside class="right"><ul class='home_nav'>
+          <li><%= link_to 'Home', search_index_path %></li>
+          <li><%= link_to 'Albums', albums_path %></li>
+          <li><%= link_to 'Artists', bands_path %></li>
+          <li><%= link_to 'Records', tracks_path %></li>
+          <li><%= link_to "Log out", session_path, method: "delete" %></li>
+        </ul></aside>
+      <% else %>
+      <aside class="right"><ul class='home_nav'>
+        <li><%= link_to 'Home', root_url%></li>
+        <li><%= link_to 'Sign Up', new_user_path%></li>
+        <li><%= link_to 'Log in', new_session_url%></li>
+      </ul></aside>
+      <% end %>
+    </div>
+  </header>
+
+    <%= yield %>
+
+
+</body>
+</html>

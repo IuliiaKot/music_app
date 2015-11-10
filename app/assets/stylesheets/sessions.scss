@@ -1,0 +1,40 @@
+// Place all the styles related to the Sessions controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+input, textarea, select, .uneditable-input {
+  border: 1px solid #bbb;
+  width: 100%;
+  margin-bottom: 15px;
+  color: red;
+//  @include box_sizing;
+}
+
+input {
+  height: auto !important;
+}
+
+.home_nav{
+  color: white;
+  float: right;
+}
+
+.home_nav li{
+  display: inline;
+  padding-right: 30px;
+  font-size: 17px;
+}
+
+ .session{
+  font-family: 'Playfair Display', serif;
+}
+
+.session h1 {
+    font-family: 'Playfair Display', serif;
+  padding-top: 40px;
+}
+
+
+.container .row {
+  padding-top: 50px;
+}

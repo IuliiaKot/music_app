@@ -1,0 +1,20 @@
+
+<main class="tracks">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-md-6 col-md-offset-3">
+        <%= form_for :@track, url: '/tracks' do |f| %>
+        <%= render "shared/errors", :flash => flash%>
+          Artist: <%= f.collection_select :band_id, Band.where(:user_id => current_user.id).all, :id, :name, :prompt => "Select a Band" , class: 'form-control'%>
+          Album: <%= f.collection_select :album_id, Album.where(:user_id => current_user.id).all, :id, :name, :prompt => "Select a Album", class: 'form-control' %>
+          Name of Song: <%= f.text_field :name %>
+          <br>
+          <%= f.submit "Submit" ,class: 'btn btn-primary'%>
+
+        <% end %>
+      </div>
+        </div>
+          </div>
+    </div>
+</main>>

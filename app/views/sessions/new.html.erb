@@ -1,0 +1,24 @@
+
+
+<div class="container session">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+  <form action="<%= session_url %>" method="post">
+    <h1 class='text-center'>Log in</h1>
+    <%= render "shared/errors" %>
+    <input
+      type="hidden"
+      name="authenticity_token"
+      value="<%= form_authenticity_token %>">
+
+    <label class='user_name' for="user_username">User Name</label>
+    <input type="text" name="user[username]" id="user_username" class='form-control'>
+
+    <label for="user_password" >Password</label>
+    <input type="password" name="user[password]" id="user_password" class='form-control'>
+
+    <input type="submit" class="btn btn-primary">
+  </form>
+</div>
+</div>
+</div>

@@ -1,0 +1,28 @@
+
+<main class='albums'>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+        <%= form_for :@album, url: '/albums' do |f| %>
+        <h1>Add a new Artist/Band</h1>
+        <%= render "shared/errors", :flash => flash%>
+          <label for="band_name">Band</label>
+
+            <select class="" name="id" id="band_name" data-placeholder="Select the band">
+              <option value=''></option>
+              <% Band.where(:user_id => current_user.id).each do |band| %>
+                 <option name = "id" value="<%= band.id %>"> <%= band.name %></option>
+              <% end %>
+            </select>
+
+          Name of Album: <%= f.text_field :name ,class: 'form-control'%>
+          Year of Album: <%= f.text_field :year,class: 'form-control' %>
+          <%= f.submit "Submit" , class: 'btn btn-primary'%>
+
+        <% end %>
+
+      </div>
+    </div>
+      </div>
+    </div>
+</main>

@@ -1,0 +1,20 @@
+<% if @tracks.count == 0 %>
+  <p class='text-center mssg'> You don't have any songs</p>
+<% else %>
+  <ul>
+    <% @tracks.each do |track|%>
+    <div class="text-center single-tr">
+      <div class="col-md-4"><%= track.name%></div>
+      <div class="col-md-4"><%= track.album.name %></div>
+      <div class="col-md-4"><%= track.album.band.name%>
+        <% if track.favotite %>
+          <%= link_to "",  favorite_track_path(track), class: ' fa fa-star-o favorite', method: :put %>
+        <% else %>
+          <%= link_to "",  favorite_track_path(track), class: ' fa fa-star-o', method: :put %>
+        <% end %>
+      <%= link_to "", { action: :destroy, id: track.id }, class: ' fa fa-trash', method: :delete  %>
+    </div>
+    </div>
+    <% end %>
+  </ul>
+<% end %>

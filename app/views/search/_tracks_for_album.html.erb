@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <h3><%= @album.name%> <%= @album.band.name%></h3>
+      <ul>
+        <% @tracks_for_album.each do |track|%>
+          <%= link_to '#', class: 'my-link' do%>
+            <ul class='search-result'><%= track.name%> </ul>
+          <% end %>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</div>

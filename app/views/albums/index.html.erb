@@ -1,0 +1,22 @@
+
+
+<main class='albums'>
+        <h2 class='text-center'>Albums</h2>
+  <div class="row text-center " >
+    <%= link_to 'All Albums', albums_path, class: 'btn btn-default' %>
+    <%= link_to 'Add a new album', new_album_path, class: 'btn btn-default' %>
+    <%= link_to 'See favorites albums', albums_path(favorite: true), class: 'btn btn-default' %>
+  </div>
+
+
+  <div class="container">
+    <div class="row">
+      <% if params[:favorite]%>
+        <%= render 'favorite_albums'%>
+      <% else %>
+        <%= render 'all_albums'%>
+      <% end %>
+    </div>
+
+  </div>
+</main>

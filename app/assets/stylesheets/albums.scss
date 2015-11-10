@@ -1,0 +1,49 @@
+// Place all the styles related to the Albums controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+// .albums .row {
+//   padding-bottom: 10px;
+//
+// }
+.albums{
+    font-family: 'Playfair Display', serif;
+}
+.my-body{
+  background: #1c1c1e;
+  font-family: 'Playfair Display', serif;
+  color: #677998;
+}
+.thumbnail {
+
+  border: 0;
+  border-radius: 0;
+  padding: 0;
+  height: 180px;
+}
+
+.fav-del{
+  float: right;
+}
+
+.my-thumbnail {
+  background: #007809;
+}
+.my-link:hover {
+  text-decoration: none;
+}
+
+.my-link:hover .thumbnail img {
+  opacity: 0.5;
+}
+.mssg{
+  color: white;
+}
+
+.name-tracks{
+  font-size: 16px;
+  margin-left: 30px;
+}
+
+.name-tracks {
+  padding-bottom: 6px;
+}

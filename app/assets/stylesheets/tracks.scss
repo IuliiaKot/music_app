@@ -1,0 +1,38 @@
+// Place all the styles related to the Tracks controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.tracks {
+  margin-top: 70px;
+  color: #677998;
+    font-family: 'Playfair Display', serif;
+}
+.single-tr{
+  margin-top: 20px;
+}
+
+.fa-star-o{
+  // margin-top: 80px;
+  // margin-right: 10px;
+  // float: right;
+  width: 20px;
+  height: 20px;
+}
+
+a:hover{
+  text-decoration: none;
+}
+
+.fa-star-o:hover {
+  color: yellow;
+   text-shadow: 1px 1px 3px #ff0000;
+}
+
+.favorite {
+  color: #870309;
+   text-shadow: 1px 1px 3px #ff0980;
+}
+
+.btn {
+  margin-top: 20px;
+}

@@ -1,0 +1,53 @@
+// Place all the styles related to the HomePages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+a:hover {
+  text-decoration: none;
+}
+
+a:hover .thumbnail img {
+  opacity: 0.5;
+}
+
+
+.home {
+  margin-top: 45px;
+}
+
+
+.left {
+  font-size:  20px;
+  margin-top: 10px;
+  float: left;
+  color: #677998;
+  width: 30%;
+  font-family: 'Playfair Display', serif;
+
+}
+
+.right{
+  float: right;
+  width: 70%;
+  margin-top: 10px;
+  font-family: 'Playfair Display', serif;
+}
+
+.welcome {
+  margin-top: 150px;
+  font-stretch: extra-condensed;
+  font-family: 'Playfair Display', serif;
+}
+
+.bnt-left{
+  padding-left: 150px;
+//  float: left;
+}
+.btn-right{
+  //float: left;
+}
+
+//albums
+.albums {
+  margin-top: 70px;
+}
